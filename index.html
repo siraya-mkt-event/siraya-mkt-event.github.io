@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siraya 活動週覽</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f5f4f0;color:#1a1a1a;min-height:100vh}
+.page{max-width:1400px;margin:0 auto;padding:1.5rem}
+.page-title{font-size:20px;font-weight:700;color:#1a1a1a;margin-bottom:1.5rem;letter-spacing:-.01em}
+.filter-section{background:#fff;border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.filter-row:last-child{margin-bottom:0}
+.filter-label{font-size:11px;color:#888;margin-right:2px;white-space:nowrap}
+.fbtn{font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;border:1.5px solid #d4d0c8;cursor:pointer;background:#fff;color:#555;transition:all .15s;white-space:nowrap}
+.fbtn:hover{border-color:#aaa;color:#222}
+.fbtn.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.fbtn.on-green{background:#166534;color:#fff;border-color:#166534}
+.fbtn.on-amber{background:#92400e;color:#fff;border-color:#92400e}
+.fbtn.on-blue{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.fbtn.on-purple{background:#6d28d9;color:#fff;border-color:#6d28d9}
+.fbtn.on-teal{background:#0e7c5a;color:#fff;border-color:#0e7c5a}
+.divider{width:1px;height:24px;background:#e0ddd6;margin:0 4px;flex-shrink:0}
+.search-wrap{margin-left:auto}
+.search-input{font-size:12px;padding:6px 14px;border-radius:20px;border:1.5px solid #d4d0c8;background:#fafaf8;color:#1a1a1a;outline:none;width:200px}
+.search-input:focus{border-color:#aaa}
+.search-input::placeholder{color:#aaa}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem}
+.stat{background:#fff;border-radius:12px;padding:.85rem 1.1rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.stat-label{font-size:11px;color:#888;margin-bottom:4px}
+.stat-val{font-size:22px;font-weight:700;color:#1a1a1a}
+.section-label{font-size:11px;font-weight:600;color:#888;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem;margin-top:.25rem}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:.6rem}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:#666}
+.ldot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.conf-sw{width:14px;height:14px;border-radius:3px;border:2px solid #16a34a;background:#dcfce7;flex-shrink:0}
+.pend-sw{width:14px;height:14px;border-radius:3px;border:1.5px dashed #d97706;background:#fef9ee;flex-shrink:0}
+.cal{display:grid;gap:4px;margin-bottom:1.5rem}
+.cal-12{grid-template-columns:repeat(12,1fr)}
+.cal-9{grid-template-columns:repeat(9,1fr)}
+.mcol{display:flex;flex-direction:column;min-width:0}
+.mhdr{font-size:10px;font-weight:600;color:#888;text-align:center;padding:2px 0 6px;letter-spacing:.04em}
+.ev{border-radius:6px;padding:6px 7px;margin-bottom:3px;cursor:pointer;border:1.5px solid transparent;transition:all .15s}
+.ev:hover{filter:brightness(.95);transform:translateY(-1px)}
+.ev.confirmed{outline:2px solid #16a34a;outline-offset:1px}
+.ev.pending{border-style:dashed!important}
+.ev-name{font-size:10px;font-weight:600;line-height:1.3;margin-bottom:2px}
+.ev-sub{font-size:9px;opacity:.68;line-height:1.3}
+.btags{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px}
+.btag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;line-height:1.6}
+.detail{margin-top:1rem;border:1.5px solid #e8e4dc;border-radius:14px;padding:1.1rem 1.4rem;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.detail-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:.75rem}
+.detail-top h3{font-size:14px;font-weight:700;color:#1a1a1a;line-height:1.4}
+.status-badge{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.drow{font-size:11px;color:#666;line-height:1.7}
+.drow strong{color:#1a1a1a;font-weight:600;display:block;font-size:10px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:1px}
+.no-results{text-align:center;color:#aaa;font-size:13px;padding:3rem}
+.hidden{display:none}
+@media(max-width:1000px){.cal-12{grid-template-columns:repeat(6,1fr)}.cal-9{grid-template-columns:repeat(5,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cal-12,.cal-9{grid-template-columns:repeat(3,1fr)}.search-wrap{margin-left:0;width:100%}.search-input{width:100%}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="page-title">Siraya 活動週覽 2025–2026</div>
+
+<div class="filter-section">
+  <div class="filter-row">
+    <span class="filter-label">行業</span>
+    <button class="fbtn on" data-g="ind" data-v="all">全部行業</button>
+    <button class="fbtn" data-g="ind" data-v="AI企業" data-on="on-teal">AI企業</button>
+    <button class="fbtn" data-g="ind" data-v="iGaming" data-on="on-blue">iGaming</button>
+    <button class="fbtn" data-g="ind" data-v="Web3" data-on="on-purple">Web3</button>
+    <div class="divider"></div>
+    <span class="filter-label">來源</span>
+    <button class="fbtn on" data-g="src" data-v="all">全部來源</button>
+    <button class="fbtn" data-g="src" data-v="own" data-on="on">自辦</button>
+    <button class="fbtn" data-g="src" data-v="ext" data-on="on">外部</button>
+    <div class="divider"></div>
+    <div class="search-wrap">
+      <input class="search-input" id="search" placeholder="搜尋活動..." oninput="render()">
+    </div>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">地區</span>
+    <button class="fbtn on" data-g="region" data-v="all">全部地區</button>
+    <button class="fbtn" data-g="region" data-v="TW" data-on="on">台灣</button>
+    <button class="fbtn" data-g="region" data-v="SG" data-on="on">新加坡</button>
+    <button class="fbtn" data-g="region" data-v="SEA" data-on="on">東南亞</button>
+    <button class="fbtn" data-g="region" data-v="HK" data-on="on">香港 / 深圳</button>
+    <button class="fbtn" data-g="region" data-v="EU" data-on="on">歐洲</button>
+    <div class="divider"></div>
+    <span class="filter-label">狀態</span>
+    <button class="fbtn on" data-g="status" data-v="all">全部狀態</button>
+    <button class="fbtn" data-g="status" data-v="confirmed" data-on="on-green">✓ 已確認</button>
+    <button class="fbtn" data-g="status" data-v="pending" data-on="on-amber">? 待確認</button>
+  </div>
+</div>
+
+<div class="stats" id="stats"></div>
+
+<div id="s-ext">
+  <div class="section-label">第三方 AI 活動</div>
+  <div class="legend">
+    <span class="leg"><span class="ldot" style="background:#3b82f6"></span>台灣</span>
+    <span class="leg"><span class="ldot" style="background:#10b981"></span>新加坡</span>
+    <span class="leg"><span class="ldot" style="background:#f59e0b"></span>東南亞</span>
+    <span class="leg"><span class="ldot" style="background:#8b5cf6"></span>香港/深圳</span>
+  </div>
+  <div class="cal cal-9" id="cal-ext"></div>
+  <div class="detail hidden" id="d-ext"></div>
+</div>
+
+<div id="s-own">
+  <div class="section-label">Siraya 自辦 / 聯辦</div>
+  <div class="legend">
+    <span class="leg"><span class="ldot" style="background:#3b82f6"></span>iGaming</span>
+    <span class="leg"><span class="ldot" style="background:#8b5cf6"></span>Web3</span>
+    <span class="leg"><span class="ldot" style="background:#10b981"></span>AI企業</span>
+    <span class="leg"><span class="conf-sw"></span>已確認</span>
+    <span class="leg"><span class="pend-sw"></span>待確認</span>
+  </div>
+  <div class="cal cal-12" id="cal-own"></div>
+  <div class="detail hidden" id="d-own"></div>
+</div>
+
+<div class="no-results hidden" id="no-results">沒有符合條件的活動</div>
+</div>
+
+<script>
+const RM={
+  TW:{bg:"#dbeafe",bd:"#3b82f6",tx:"#1e3a8a",label:"台灣"},
+  SG:{bg:"#d1fae5",bd:"#10b981",tx:"#064e3b",label:"新加坡"},
+  SEA:{bg:"#fef3c7",bd:"#f59e0b",tx:"#78350f",label:"東南亞"},
+  HK:{bg:"#ede9fe",bd:"#8b5cf6",tx:"#4c1d95",label:"香港/深圳"},
+  EU:{bg:"#fce7f3",bd:"#ec4899",tx:"#831843",label:"歐洲"},
+};
+const IM={
+  iGaming:{bg:"#dbeafe",bd:"#3b82f6",tx:"#1e3a8a"},
+  Web3:{bg:"#ede9fe",bd:"#8b5cf6",tx:"#4c1d95"},
+  "AI企業":{bg:"#d1fae5",bd:"#10b981",tx:"#064e3b"},
+};
+const TT={exhibition:"展覽",party:"Party",afterparty:"After Party",seminar:"研討會/私局"};
+
+const EXT=[
+  {m:3,name:"AI EXPO Taiwan",loc:"台北",reg:"TW",ind:"AI企業",date:"3/25–3/27",url:"https://ai-expo.tw/",axis:"AI 產業應用、企業導入、生態系",focus:"AI 商業應用 / AI 平台 / GenAI",note:"AI 主題最集中。可逛展，評估未來參展機會。",visit:["觀察台灣 AI 商業應用落地案例，了解企業導入現況","接觸潛在合作夥伴與 AI 採購決策者","評估未來展位或贊助機會"]},
+  {m:4,name:"GITEX Asia × AI Everything",loc:"新加坡",reg:"SG",ind:"AI企業",date:"4/9–4/10（2026）",url:"https://gitex.com/gitex-asia",axis:"AI、Cloud、資安、健康科技、Startup",focus:"AI Everything Asia / AI × 生態系",note:"23,000人，110國。2026年版建議早規劃。",isNew:true,visit:["東南亞規模最大 AI 展，媒體與投資人密度高","接觸跨國科技廠商，評估合作與品牌曝光機會","觀察 AI Everything 趨勢，掌握東南亞市場動向"]},
+  {m:4,name:"AI Revolution Summit Vietnam",loc:"胡志明市",reg:"SEA",ind:"AI企業",date:"4/24",url:"https://airevolutionsummit.com/vietnam/",axis:"Enterprise AI、GenAI",focus:"AI adoption / GenAI 應用 / AI Infra",note:"規模中等，已在調研清單。",visit:["了解越南企業 AI 需求，接觸當地決策者","配合 Siraya 越南市場布局，評估潛在合作機會"]},
+  {m:4,name:"2026 D Forum 智慧工廠論壇",loc:"台北",reg:"TW",ind:"AI企業",date:"4/28",url:"https://www.digitimes.com.tw/seminar/DForum_20260428/",axis:"AI 智慧製造、供應鏈、工廠自動化",focus:"AI 自適應製造 / 智慧工廠 / 供應鏈重組",note:"聚焦 AI 驅動下的智慧製造轉型，探討自動化升級與供應鏈重組。",visit:["了解台灣製造業 AI 導入趨勢","評估 AI Infra 需求是否與 Siraya 服務對接"]},
+  {m:4,name:"HK Web3 Festival 2026",loc:"香港",reg:"HK",ind:"Web3",date:"4/20–23",url:"https://www.web3festival.org",axis:"Web3、區塊鏈生態",focus:"Web3 / DeFi / GameFi",note:"萬向區塊鏈主辦；Cobo辦新品發布，可評估贊助。50,000+人。",visit:["Cobo 新品發布現場，評估贊助或聯辦機會","接觸香港 Web3 生態，與 TOKEN2049 受眾重疊度高"]},
+  {m:4,name:"GTC 全球流量大會",loc:"深圳",reg:"HK",ind:"Web3",date:"4/23–24",url:"https://www.baijing.cn/gtc",axis:"流量、行銷、Web3",focus:"Web3 x 流量 / 行銷科技",note:"Cobo在行業峰會期間辦Party，可贊助。30,000+人。",visit:["Cobo 在場辦 Party，可評估贊助機會","接觸流量與行銷科技人脈，拓展 Web3 跨界合作"]},
+  {m:5,name:"Human Intelligence & AI",loc:"新加坡",reg:"SG",ind:"AI企業",date:"5/7",url:"#",axis:"Human × AI 協作、AI 教育與職場",focus:"Human dimension of AI adoption",note:"主體較不聚焦，適合觀察趨勢。",visit:["了解 AI 人才戰略趨勢，配合 Siraya 內部 AI 轉型規劃"]},
+  {m:5,name:"DCCI Datacentre & Cloud Expo",loc:"馬來西亞",reg:"SEA",ind:"AI企業",date:"5/12–13",url:"https://malaysia.dccisummit.com/",axis:"Cloud、Data Center、Infra",focus:"AI Infra / 算力 / 平台層",note:"偏基礎設施，過往贊助商較少知名廠商。",visit:["了解東南亞 AI Infra 需求","接觸雲端與資料中心廠商，評估技術合作機會"]},
+  {m:5,name:"Conversational AI & CX Summit",loc:"新加坡",reg:"SG",ind:"AI企業",date:"5/15",url:"https://conversationaltechsummitasia.com/sg/",axis:"GenAI in CX、AI 自動化、對話式 AI",focus:"GenAI / Chatbot & Voice / Robo Advisors",note:"東南亞各國定期舉辦；銀行、零售、電商產業。",visit:["了解 GenAI 在金融、零售、電商的 CX 應用","接觸東南亞企業 AI 採購決策者"]},
+  {m:5,name:"Asia Tech x Singapore (ATxSG)",loc:"新加坡",reg:"SG",ind:"AI企業",date:"5/20–22",url:"https://asiatechxsg.com",axis:"AI、Cloud、Security、Digital Economy",focus:"AI 生態系 / 跨產業 AI 應用",note:"7,000人，50+講者。主題廣涵蓋 AI 應用、工作流。",visit:["新加坡政府主辦，掌握政策監管與數位轉型方向","接觸大型企業 AI 採購決策者","品牌曝光機會，評估 Siraya 服務推廣"]},
+  {m:5,name:"ASEAN Gaming Summit 2026",loc:"馬尼拉",reg:"SEA",ind:"iGaming",date:"5/6–5/8",url:"https://aseangaming.com/",axis:"iGaming、電競、遊戲產業",focus:"iGaming 生態 / 東南亞遊戲市場",note:"東南亞最大 iGaming 峰會之一。",visit:["iGaming 核心展會，了解東南亞遊戲市場最新動向","接觸潛在 iGaming 客戶，評估合作機會"]},
+  {m:5,name:"G2E Asia 2026",loc:"澳門",reg:"HK",ind:"AI企業",date:"5/12–5/14",url:"https://www.g2easia.com/",axis:"博彩、iGaming、娛樂城科技",focus:"iGaming 技術 / 博彩生態",note:"亞洲最具規模的博彩與 iGaming 展會。",visit:["亞洲最大博彩展，iGaming 科技廠商高度集中","接觸博彩科技採購決策方，評估展位或贊助機會"]},
+  {m:5,name:"Southeast Asia Blockchain Week",loc:"曼谷",reg:"SEA",ind:"Web3",date:"5/18–5/24",url:"https://www.seablockchainweek.org/",axis:"區塊鏈、Web3、DeFi",focus:"Web3 生態 / DeFi / 東南亞區塊鏈",note:"東南亞 Web3 生態年度盛會。",visit:["深度接觸東南亞 Web3 生態","了解 DeFi / 區塊鏈協議最新動向，評估 Cobo 等夥伴合作"]},
+  {m:5,name:"Unchained Summit Vietnam",loc:"峇港",reg:"SEA",ind:"Web3",date:"5/28–5/29",url:"https://unchainedsummit.com/vietnam/",axis:"Web3、區塊鏈、DeFi",focus:"Web3 / DeFi / 越南加密生態",note:"越南 Web3 與加密產業峰會。",visit:["接觸越南 Web3 社群，配合越南市場布局","了解越南加密生態現況"]},
+  {m:6,name:"COMPUTEX",loc:"台北南港",reg:"TW",ind:"AI企業",date:"6/2–5",url:"https://www.computex.com.tw",axis:"AI 基礎建設、資料中心、雲端生態",focus:"AI Infrastructure / AI Server / Cloud",note:"注意與 Sigma Asia 時間衝突。",visit:["AI Infra 硬體趨勢第一手觀察","接觸 NVIDIA、AI 晶片廠商生態，了解算力供應鏈最新佈局"]},
+  {m:6,name:"SuperAI",loc:"新加坡",reg:"SG",ind:"AI企業",date:"6/10–11（2026）",url:"https://superai.com",axis:"Frontier AI、LLM、Robotics、GenAI",focus:"LLM / Robotics / GenAI / AI × Finance, Healthcare",note:"⭐ 強烈推薦。7,000人，100+國，1,500+AI企業。純AI年會，Startup競賽$250K+。",isNew:true,visit:["純 AI 峰會密度最高，接觸 AI 新創與全球投資人","觀察 GenAI 商業化最新趨勢，掌握產業走向","評估贊助機會，Startup 競賽獎金 $250K+"]},
+  {m:6,name:"AWS Summit Taiwan",loc:"台北",reg:"TW",ind:"AI企業",date:"6–7月（TBC）",url:"https://aws.amazon.com/tw/events/summits/",axis:"雲端生態、企業上雲、AI 架構",focus:"AI on Cloud / GenAI / AI Security",note:"尚未開放報名，跟主辦確認。",visit:["了解 AWS 在台灣的 AI 合作生態","接觸企業雲端採購決策者，評估雲端服務合作機會"]},
+  {m:6,name:"AI+ Power Hong Kong 2026",loc:"香港 HKCEC",reg:"HK",ind:"AI企業",date:"6/4–5",url:"https://www.aipluspower.com",axis:"AI 商業應用、企業 AI 導入、AI Infra",focus:"AI Applications × Business / FinTech / MarTech",note:"香港會展中心，亞洲 AI EXPO 聯盟成員，NVIDIA、Google、Microsoft 歷年參與，香港最大純 AI 商業應用展。",isNew:true,visit:["香港 AI 商業應用最集中展會，接觸 FinTech / 零售採購決策方","NVIDIA、Google、Microsoft 均有參與，品牌曝光機會高","評估 Siraya 服務在香港市場的推廣機會"]},
+  {m:6,name:"AI4X – Accelerate Conference 2026",loc:"新加坡",reg:"SG",ind:"AI企業",date:"6/15–19",url:"https://ai4x.cc",axis:"AI × 科學、材料科學、生命科學、金融 Deep Tech",focus:"AI for Science / Deep Tech / AI × Research",note:"Raffles City Convention Centre，NTU 與多倫多大學聯合主辦，800+ 人，60+ 國際講者，結合學術與深科技產業應用。",isNew:true,visit:["了解 AI × 深科技 / 材料科學前沿應用","較學術導向，適合技術團隊了解 AI 研究最新趨勢"]},
+  {m:6,name:"AI TAIWAN 未來商務展 × All in AI",loc:"台北",reg:"TW",ind:"AI企業",date:"6/24–26",url:"https://ai-taiwan.com.tw",axis:"企業 AI 轉型、AI 降本增效、AI 新商模",focus:"AI 商業應用 / 企業 AI 落地 / 數位轉型",note:"台北花博爭艷館，數位時代主辦，台灣規模最大 AI 商業展，含三天 All in AI 論壇場次，聚焦企業 AI 降本增效與新商模。",isNew:true,visit:["台灣最大 AI 商業展，接觸企業 AI 採購決策者","評估 Siraya AI 服務在台灣市場的推廣機會","可考慮展位參與或論壇演講申請"]},
+  {m:7,name:"iThome AI Enterprise Summit 2026",loc:"台北南港",reg:"TW",ind:"AI企業",date:"7/2",url:"https://aienterprise.ithome.com.tw/2026/",axis:"企業 LLM 部署、RAG 落地、AI 算力架構",focus:"Enterprise AI / LLM / RAG / AI Infra",note:"台北南港展覽二館 7F，iThome 主辦，聚焦技術決策層（CIO / 架構師），與臺灣雲端大會同期 7/1–2 舉辦。",isNew:true,visit:["技術決策層密集（CIO / 架構師），了解企業 AI 導入痛點","接觸台灣企業 LLM 與 AI Infra 採購需求"]},
+  {m:7,name:"GenAI Summit Hong Kong",loc:"香港",reg:"HK",ind:"AI企業",date:"7/24",url:"#",urlText:"尚未開放",axis:"企業 GenAI 落地應用",focus:"GenAI 應用 / 企業數位轉型",note:"香港本地一日峰會，企業領袖與AI創業者為主。",isNew:true,visit:["香港企業 GenAI C-suite 決策者聚集","評估 Siraya AI 服務在香港的推廣機會"]},
+  {m:7,name:"AI WAVE SHOW",loc:"台北",reg:"TW",ind:"AI企業",date:"7–8月",url:"https://ai-wave.tw/",axis:"AI 解決方案展示、企業應用",focus:"AI 應用 / AI 解決方案 / PoC",note:"偏硬體與國家AI形象展示，可逛展了解趨勢。",visit:["台灣 AI 應用落地展示，了解本土 AI 方案趨勢","偏硬體與政府形象展，適合逛展觀察競品動向"]},
+  {m:7,name:"DigiTech ASEAN Thailand",loc:"曼谷",reg:"SEA",ind:"AI企業",date:"7/22–24",url:"https://digitechasean.com/",axis:"AI、Cloud、Digital 數位轉型",focus:"AI 應用 / 數位轉型",note:"泰國經濟部主辦，12,000+人。可考慮結合時段自辦講座。",visit:["接觸泰國政府與企業數位轉型決策者","評估泰國市場機會，可結合 Siraya 自辦講座"]},
+  {m:8,name:"HITCON",loc:"台北",reg:"TW",ind:"AI企業",date:"8–9月",url:"https://hitcon.org",axis:"資安技術、攻防、研究導向",focus:"AI × 資安技術 / LLM Security",note:"Invitation Only，資安主題為主。Web3資安討論，可讓相關人員逛逛。",visit:["了解 AI × 資安最新攻防技術","接觸台灣資安技術社群，評估潛在合作"]},
+  {m:9,name:"Reuters Momentum AI Asia",loc:"新加坡",reg:"SG",ind:"AI企業",date:"9/17（1天）",url:"https://10times.com/e1h1-7g11-zrkp-g",axis:"企業 AI 策略、AI ROI、AI 治理",focus:"AI Value & Scalability / AI Governance",note:"300人C-suite峰會，30+高層講者。贊助可獲名單+演講機會。",isNew:true,visit:["C-suite 密集，贊助可獲得高品質企業決策者名單","演講機會強化 Siraya 品牌，接觸企業 AI 採購最高決策層"]},
+  {m:9,name:"Big Data & AI World Asia",loc:"新加坡",reg:"SG",ind:"AI企業",date:"9/29–30",url:"https://www.singaporetechnologyweek.com/",axis:"AI、Big Data、Analytics",focus:"Enterprise AI / Data-driven AI",note:"29,000人，500+參展商。含Cloud & AI Infra、DevOps、Cyber子會。",visit:["規模 29,000 人，含 Cloud & AI Infra 子展直接對應 Siraya 服務","接觸 AI / Data 生態全面，評估展位或贊助機會"]},
+  {m:9,name:"SBC Summit",loc:"新加坡",reg:"SG",ind:"iGaming",date:"9/29–10/1",url:"https://sbcevents.com/sbc-summit/",axis:"iGaming、支付、平台科技",focus:"iGaming 生態 / 支付 / 營運",note:"全球最大 iGaming 峰會之一，業界必參。",visit:["全球最重要 iGaming 峰會之一，業界人脈必到","接觸全球博彩科技採購方，強化 iGaming 業務"]},
+  {m:10,name:"GITEX Vietnam",loc:"河內",reg:"SEA",ind:"AI企業",date:"10/1–2",url:"https://gitexvietnam.com/",axis:"AI、Cloud、Cybersecurity",focus:"AI 生態 / 創新應用",note:"去中心化、區塊鏈主題多。建議Web3團隊逛展。",visit:["接觸越南政府與科技企業決策者","Web3 / 區塊鏈主題豐富，配合越南 Web3 市場布局"]},
+  {m:11,name:"Sigma Europe",loc:"羅馬",reg:"EU",ind:"iGaming",date:"11/2–4",url:"https://sigma.world/summits/world/",axis:"iGaming、博彩、電競",focus:"iGaming 生態 / 歐洲市場",note:"Sigma 集團旗下歐洲版展會，iGaming 專業人士匯聚。",visit:["歐洲 iGaming 生態，接觸國際博彩廠商","了解歐洲 iGaming 市場趨勢，評估歐洲業務拓展"]},
+  {m:11,name:"DIGITIMES Security Summit",loc:"台北",reg:"TW",ind:"AI企業",date:"暫定 11/5–6",url:"https://www.digitimes.com.tw/seminar/securitysummit_2025/",urlText:"尚未開放（參考去年 →）",axis:"企業資安策略、趨勢論壇",focus:"AI Security / Cloud Security / 企業治理",note:"與Siraya服務高度符合。已聯繫主辦。黃金贊助含演講+名單。",visit:["台灣企業資安採購決策者密集","贊助含演講機會，可直接推廣 Siraya 服務","與 Siraya 服務高度符合，強烈建議參與"]},
+];
+
+const OWN=[
+  {m:1,name:"ICE Barcelona 2026 + After Party",loc:"西班牙",reg:"EU",ind:"iGaming",type:"exhibition",date:"1/19–21",sponsors:"CDNW 50%、Byteplus、TiDB",att:"65,000+",confirmed:true,note:"iGaming圈最大展會之一。35㎡展位。優質人脈交換，品牌曝光。"},
+  {m:3,name:"Sri Lanka After Party（GGC期間）",loc:"斯里蘭卡",reg:"SEA",ind:"iGaming",type:"afterparty",date:"3/16",sponsors:"CDNW、平博體育",att:"50–100",confirmed:true,note:"灰度GGC展會期間辦，建議選17號。"},
+  {m:4,name:"越南 Web3 私局",loc:"越南",reg:"SEA",ind:"Web3",type:"seminar",date:"4/9",sponsors:"Cobo Co-host、Byteplus 5k",att:"約5人",confirmed:true,note:"建議4/9辦，與Cobo/AWC Co-host。"},
+  {m:4,name:"馬來西亞 AI 研討會",loc:"馬來西亞",reg:"SEA",ind:["AI企業","iGaming"],type:"seminar",date:"4/11",sponsors:"CDNW 5k、TiDB 5k、CF 5k、Cobo 5k",att:"-",confirmed:true,note:"Co-host with BytePlus/Cloudflare，展示落地案例，挖掘AI需求與專案合作。"},
+  {m:5,name:"AI賦能時代 人才戰略論壇",loc:"台北",reg:"TW",ind:"AI企業",type:"seminar",date:"5/22",sponsors:"待定",att:"小規模",confirmed:true,note:"AI 賦能時代人才戰略主題論壇，免費公開活動。"},
+  {m:6,name:"Sigma Asia 2026",loc:"馬尼拉",reg:"SEA",ind:"iGaming",type:"exhibition",date:"6/1–3",sponsors:"CDNW 50%、Byteplus 10k、AWS 10k、TiDB 10k、Cobo 10k",att:"16,000+",confirmed:true,note:"48㎡展位。"},
+  {m:6,name:"Sigma After Party",loc:"馬尼拉",reg:"SEA",ind:"iGaming",type:"afterparty",date:"6/1–3",sponsors:"CDNW 50%、Cobo 5k、TiDB 10k",att:"151",confirmed:true,note:"Sigma展會期間舉辦，優質人脈交換，圈內口碑傳播。"},
+  {m:6,name:"Web3 私局（6月）",loc:"待定",reg:"SEA",ind:"Web3",type:"seminar",date:"6月中下旬",sponsors:"Cobo Co-host",att:"-",confirmed:false,note:"建議6月中下旬辦，與Cobo Co-host。"},
+  {m:7,name:"iGB LIVE 2026",loc:"倫敦",reg:"EU",ind:"iGaming",type:"exhibition",date:"7/1–2",sponsors:"CDNW 50%、Byteplus 10k、AWS 10k、TiDB 10k",att:"15,000+",confirmed:true,note:"18㎡展位。Exhibit Fee + Booth Build GBP22,304 (USD29k)。"},
+  {m:7,name:"iGB After Party",loc:"倫敦",reg:"EU",ind:"iGaming",type:"afterparty",date:"7/1–2",sponsors:"隨展辦",att:"-",confirmed:true,note:"iGB LIVE展會期間舉辦After Party。"},
+  {m:8,name:"SPiCE BKK After Party",loc:"泰國",reg:"SEA",ind:"iGaming",type:"afterparty",date:"8/5–7",sponsors:"CDNW 10k、TiDB 3k、Byteplus 3k、偉仕佳傑 4k",att:"約20",confirmed:true,note:"Co-host with CDNetworks，考慮邀請Pronet聯辦。"},
+  {m:8,name:"Coinfest Asia（峇里島）",loc:"峇里島",reg:"SEA",ind:"Web3",type:"exhibition",date:"8/20–21",sponsors:"CF 4k、TiDB、Cobo 50%",att:"20,000+",confirmed:true,note:"9㎡展位。Exhibition 1萬 + Party 1.2萬，與Cobo Co-host Party，預算55開。"},
+  {m:8,name:"Coinfest After Party",loc:"峇里島",reg:"SEA",ind:"Web3",type:"afterparty",date:"8/20–21",sponsors:"Cobo Co-host",att:"-",confirmed:true,note:"Coinfest Asia 展會期間與 Cobo Co-host Party。"},
+  {m:9,name:"Vibe Coding × Siraya AI 活動",loc:"台北",reg:"TW",ind:"AI企業",type:"seminar",date:"9月",sponsors:"Vibe Coding 聯辦",att:"約200",confirmed:true,note:"與 Vibe Coding 社群聯辦，台北，約 200 人。"},
+  {m:9,name:"Web3 私局（Q3 越南）",loc:"越南",reg:"SEA",ind:"Web3",type:"seminar",date:"9月中旬",sponsors:"Cobo Co-host、TiDB 3k、Byteplus 5k、CF 3k",att:"約11",confirmed:false,note:"活動較密集，若辦則建議9月中旬。"},
+  {m:10,name:"TOKEN2049 新加坡",loc:"新加坡",reg:"SG",ind:"Web3",type:"exhibition",date:"10/7–8",sponsors:"Byteplus 10k、TiDB 4k、偉仕佳傑 6k、贊助Cobo Party",att:"15,000+",confirmed:true,note:"9㎡展位參展 + 贊助Cobo Party。"},
+  {m:10,name:"TOKEN2049 After Party",loc:"新加坡",reg:"SG",ind:"Web3",type:"afterparty",date:"10/7–8",sponsors:"隨Cobo Party",att:"-",confirmed:true,note:"TOKEN2049展會期間After Party。"},
+  {m:10,name:"Web3 私局（Q4 越南）",loc:"越南",reg:"SEA",ind:"Web3",type:"seminar",date:"10月",sponsors:"待定",att:"-",confirmed:false,note:"Q4預計越南Web3產業私局。"},
+  {m:12,name:"AWA After Party（泰國）",loc:"泰國",reg:"SEA",ind:"iGaming",type:"afterparty",date:"12月",sponsors:"CDNW 10k、TiDB 5k、Byteplus 3k、CF 3k",att:"約21",confirmed:true,note:"AWA展會期間舉辦。"},
+  {m:12,name:"Taipei Blockchain Week 2026",loc:"台灣",reg:"TW",ind:"Web3",type:"exhibition",date:"12月",sponsors:"CDNW 10k、Byteplus 3k",att:"4,000–7,000",confirmed:true,note:"亞洲技術密度最高的本地Web3大會。"},
+];
+
+const F={ind:"all",src:"all",region:"all",status:"all"};
+
+document.querySelectorAll('.fbtn[data-g]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const g=btn.dataset.g;
+    document.querySelectorAll(`.fbtn[data-g="${g}"]`).forEach(b=>{
+      b.classList.remove('on','on-green','on-amber','on-blue','on-purple','on-teal');
+    });
+    btn.classList.add(btn.dataset.on||'on');
+    F[g]=btn.dataset.v;
+    render();
+  });
+});
+
+function ok(ev,isOwn){
+  if(F.ind!=='all'&&!(Array.isArray(ev.ind)?ev.ind.includes(F.ind):ev.ind===F.ind)) return false;
+  if(F.src==='own'&&!isOwn) return false;
+  if(F.src==='ext'&&isOwn) return false;
+  if(F.region!=='all'&&ev.reg!==F.region) return false;
+  if(F.status!=='all'&&isOwn){
+    if(F.status==='confirmed'&&!ev.confirmed) return false;
+    if(F.status==='pending'&&ev.confirmed) return false;
+  }
+  const q=document.getElementById('search').value.toLowerCase();
+  if(q&&!ev.name.toLowerCase().includes(q)&&!ev.loc.toLowerCase().includes(q)) return false;
+  return true;
+}
+
+function render(){
+  const ef=EXT.filter(e=>ok(e,false));
+  const of=OWN.filter(e=>ok(e,true));
+  buildCal('cal-ext','d-ext',ef,[3,4,5,6,7,8,9,10,11],false);
+  buildCal('cal-own','d-own',of,[1,2,3,4,5,6,7,8,9,10,11,12],true);
+  const conf=of.filter(e=>e.confirmed).length;
+  document.getElementById('stats').innerHTML=`
+    <div class="stat"><div class="stat-label">活動總數</div><div class="stat-val">${ef.length+of.length}</div></div>
+    <div class="stat"><div class="stat-label">自辦活動</div><div class="stat-val" style="color:#b45309">${of.length}</div></div>
+    <div class="stat"><div class="stat-label">外部活動</div><div class="stat-val">${ef.length}</div></div>
+    <div class="stat"><div class="stat-label">已確認</div><div class="stat-val" style="color:#16a34a">${conf}</div></div>`;
+  document.getElementById('s-ext').classList.toggle('hidden',F.src==='own');
+  document.getElementById('s-own').classList.toggle('hidden',F.src==='ext');
+  document.getElementById('no-results').classList.toggle('hidden',ef.length+of.length>0);
+}
+
+function buildCal(calId,detId,items,months,isOwn){
+  const cal=document.getElementById(calId);
+  cal.innerHTML='';
+  months.forEach(mn=>{
+    const col=document.createElement('div');
+    col.className='mcol';
+    const hdr=document.createElement('div');
+    hdr.className='mhdr';
+    hdr.textContent=mn+'月';
+    col.appendChild(hdr);
+    items.filter(e=>e.m===mn).forEach(ev=>{
+      const indPrimary=Array.isArray(ev.ind)?ev.ind[0]:ev.ind;
+      const indList=Array.isArray(ev.ind)?ev.ind:[ev.ind];
+      const r=isOwn?IM[indPrimary]:RM[ev.reg]||RM.SEA;
+      const card=document.createElement('div');
+      card.className='ev'+(isOwn?(ev.confirmed?' confirmed':' pending'):'');
+      card.style.cssText=`background:${r.bg};border-color:${r.bd}`;
+      const newBadge=(!isOwn&&ev.isNew)?`<span class="btag" style="background:#e0f2fe;color:#0369a1">NEW</span>`:'';
+      const typeLabel=isOwn?(TT[ev.type]||''):'';
+      const regBadge=isOwn?`<span class="btag" style="background:#f1f5f9;color:#475569">${RM[ev.reg]?.label||ev.reg}</span>`:'';
+      const indTags=isOwn?indList.map(i=>`<span class="btag" style="background:${IM[i]?.bg||r.bg};color:${IM[i]?.tx||r.tx};border:0.5px solid ${IM[i]?.bd||r.bd}">${i}</span>`).join(''):'';
+      card.innerHTML=`<div class="ev-name" style="color:${r.tx}">${ev.name}</div><div class="ev-sub" style="color:${r.tx}">${ev.loc} · ${ev.date}</div><div class="btags">${isOwn?`${indTags}<span class="btag" style="background:#f1f5f9;color:#475569">${typeLabel}</span>${regBadge}`:newBadge}</div>`;
+      card.addEventListener('click',()=>showDetail(detId,ev,r,isOwn));
+      col.appendChild(card);
+    });
+    cal.appendChild(col);
+  });
+}
+
+function showDetail(detId,ev,r,isOwn){
+  const d=document.getElementById(detId);
+  d.classList.remove('hidden');
+  const sb=isOwn?(ev.confirmed
+    ?`<span class="status-badge" style="background:#dcfce7;color:#166534">✓ 已確認</span>`
+    :`<span class="status-badge" style="background:#fef3c7;color:#92400e">? 待確認</span>`):'';
+  const urlHtml=ev.url&&ev.url!=='#'?`<a href="${ev.url}" target="_blank" style="color:#1d4ed8">${ev.urlText||'前往官網 →'}</a>`:ev.urlText||'–';
+  const visitHtml=ev.visit?ev.visit.map(v=>`• ${v}`).join('<br>'):'–';
+  const rows=isOwn
+    ?[['日期',ev.date],['地點',ev.loc],['贊助商 / 聯辦',ev.sponsors],['預計人數',ev.att],['備註',ev.note,'full']]
+    :[['日期',ev.date],['地點',ev.loc],['活動連結',urlHtml],['活動主軸',ev.axis],['AI 焦點',ev.focus],['備註 / 評估',ev.note,'full'],['值得 Siraya 團隊參觀的點',visitHtml,'full']];
+  d.innerHTML=`<div class="detail-top"><h3>${ev.name}</h3>${sb}</div><div class="dgrid">${rows.map(([k,v,s])=>`<div class="drow"${s?' style="grid-column:1/-1"':''}><strong>${k}</strong>${v}</div>`).join('')}</div>`;
+  d.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+render();
+</script>
+</body>
+</html>
