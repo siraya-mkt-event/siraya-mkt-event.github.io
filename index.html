@@ -109,7 +109,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
     <span class="leg"><span class="ldot" style="background:#f59e0b"></span>東南亞</span>
     <span class="leg"><span class="ldot" style="background:#8b5cf6"></span>香港/深圳</span>
   </div>
-  <div class="cal cal-9" id="cal-ext"></div>
+  <div class="cal cal-12" id="cal-ext"></div>
   <div class="detail hidden" id="d-ext"></div>
 </div>
 
@@ -176,6 +176,14 @@ const EXT=[
   {m:10,name:"GITEX Vietnam",loc:"河內",reg:"SEA",ind:"AI企業",date:"10/1–2",url:"https://gitexvietnam.com/",axis:"AI、Cloud、Cybersecurity",focus:"AI 生態 / 創新應用",note:"去中心化、區塊鏈主題多。建議Web3團隊逛展。",visit:["接觸越南政府與科技企業決策者","Web3 / 區塊鏈主題豐富，配合越南 Web3 市場布局"]},
   {m:11,name:"Sigma Europe",loc:"羅馬",reg:"EU",ind:"iGaming",date:"11/2–4",url:"https://sigma.world/summits/world/",axis:"iGaming、博彩、電競",focus:"iGaming 生態 / 歐洲市場",note:"Sigma 集團旗下歐洲版展會，iGaming 專業人士匯聚。",visit:["歐洲 iGaming 生態，接觸國際博彩廠商","了解歐洲 iGaming 市場趨勢，評估歐洲業務拓展"]},
   {m:11,name:"DIGITIMES Security Summit",loc:"台北",reg:"TW",ind:"AI企業",date:"暫定 11/5–6",url:"https://www.digitimes.com.tw/seminar/securitysummit_2025/",urlText:"尚未開放（參考去年 →）",axis:"企業資安策略、趨勢論壇",focus:"AI Security / Cloud Security / 企業治理",note:"與Siraya服務高度符合。已聯繫主辦。黃金贊助含演講+名單。",visit:["台灣企業資安採購決策者密集","贊助含演講機會，可直接推廣 Siraya 服務","與 Siraya 服務高度符合，強烈建議參與"]},
+  {m:2,name:"Consensus Hong Kong 2026",loc:"香港",reg:"HK",ind:"Web3",date:"2/10–2/12",url:"https://consensus-hongkong.coindesk.com/",axis:"區塊鏈生態、機構加密貨幣、DeFi、AI × Web3",focus:"Web3 生態 / 機構採用 / DeFi / AI × 加密",note:"CoinDesk 主辦亞洲首屆旗艦加密峰會；含香港機構峰會（2/10）與 CoinDesk PitchFest；香港 Web3 生態核心活動。",isNew:true,visit:["接觸機構投資人與亞太 Web3 創辦人，高品質人脈","了解 DeFi / 加密貨幣機構採用最新趨勢","評估 Siraya Web3 服務在香港的推廣機會"]},
+  {m:5,name:"AI Engineer World's Fair Singapore 2026",loc:"新加坡",reg:"SG",ind:"AI企業",date:"5/15–5/17",url:"https://www.ai.engineer/singapore",axis:"AI 工程、LLM 開發、AI 基礎設施、Agent 開發",focus:"AI Engineering / LLM Infra / Agent / AI Robotics",note:"全球 AI Engineer World's Fair 首屆亞洲版；OpenAI、Google DeepMind 贊助；2,000+ 工程師，純技術無廠商宣傳。注意與 Conversational AI & CX Summit 同日（5/15）。",isNew:true,visit:["亞洲首屆 AI 工程師大會，技術密度最高","接觸 AI 產品開發者與 LLM Infra 工具廠商","了解 LLM / Agent 最新開發趨勢，有助 Siraya AI 產品規劃"]},
+  {m:5,name:"Tech Fest Summit Hong Kong 2026",loc:"香港",reg:"HK",ind:"AI企業",date:"5/21",url:"https://techfest.hk/",axis:"企業科技、Cloud、AI 應用、數位轉型",focus:"Enterprise Tech / AI 應用 / Cloud / 數位轉型",note:"HKCEC 舉辦，2,000+ 高階科技決策者；含 Cloud Forum、Nexus APAC；填補 HK Web3 Festival（4月）與 AI+ Power HK（6月）之間的空檔。",isNew:true,visit:["接觸香港企業高階科技決策者","了解香港 AI 商業應用與數位轉型趨勢","評估 Siraya 服務在香港企業科技市場的推廣機會"]},
+  {m:6,name:"SPiCE East Asia 2026（越南）",loc:"胡志明市",reg:"SEA",ind:"iGaming",date:"6/24–6/26",url:"https://www.spiceseries.com/sea",axis:"iGaming、越南 / 東亞博彩、行動博彩、電競博彩",focus:"iGaming 生態 / 越南市場 / 東南亞博彩",note:"SPiCE 系列越南版；聚焦越南及東亞 iGaming 市場；與 Siraya 越南市場布局高度契合。與 AI TAIWAN 展（6/24–26）同期，注意排程。",isNew:true,visit:["直接接觸越南 iGaming 市場採購決策者","配合 Siraya 越南 iGaming 業務擴展計畫","了解越南行動博彩市場最新法規與動態"]},
+  {m:7,name:"WebX 2026",loc:"東京",reg:"SEA",ind:"Web3",date:"7/13–7/14",url:"https://webx-asia.com/",axis:"Web3、DeFi、企業區塊鏈、代幣化、GameFi",focus:"Web3 生態 / DeFi / GameFi / 代幣化",note:"CoinPost（日本最大加密媒體）主辦；亞洲最大 Web3 會議之一，13,000+ 人，296 講者，155 場側邊活動；日本 Web3 市場重要場合。",isNew:true,visit:["接觸日本及亞洲 Web3 生態，人脈品質高","了解 GameFi / 代幣化最新趨勢","拓展 Siraya Web3 業務至日本市場的良好機會"]},
+  {m:11,name:"Singapore FinTech Festival 2026",loc:"新加坡",reg:"SG",ind:"AI企業",date:"11/18–11/20",url:"https://www.fintechfestival.sg/",axis:"FinTech、數位資產、AI 治理、DeFi、RegTech",focus:"AI × FinTech / Web3 / DeFi / AI Governance",note:"全球最大 FinTech 展，70,000+ 人，140+ 國；新加坡政府主辦，監管與機構參與度極高；涵蓋 AI、區塊鏈、數位資產六大主題舞台。",isNew:true,visit:["規模最大、監管參與度最高的 FinTech 展，掌握 AI × 金融政策走向","接觸機構 AI / Web3 採購決策方，品牌曝光機會高","評估 Siraya AI + Web3 服務在金融科技領域的應用機會"]},
+  {m:11,name:"SiGMA South Asia 2026",loc:"曼谷",reg:"SEA",ind:"iGaming",date:"11/30–12/2",url:"https://sigma.world/summits/south-asia/",axis:"iGaming、南亞 / 東南亞博彩生態、行動博彩",focus:"iGaming 生態 / 東南亞 & 南亞市場 / 行動博彩",note:"SiGMA 南亞旗艦峰會，5,000+ 代表，600+ 公司；立即接續 Affiliate World Asia（12/3–4），一趟曼谷行可涵蓋兩大展會。",isNew:true,visit:["與 Affiliate World Asia 背靠背，一趟曼谷行效益倍增","了解印度、泰國、越南、菲律賓最新 iGaming 法規與市場動態","拓展東南亞 iGaming 合作夥伴關係"]},
+  {m:12,name:"Affiliate World Asia 2026",loc:"曼谷",reg:"SEA",ind:"iGaming",date:"12/3–12/4",url:"https://affiliateworldconferences.com/asia",axis:"聯盟行銷、iGaming 流量、加密 / 電商 / AI 行銷科技",focus:"iGaming Affiliate / 流量業務 / AI 行銷",note:"亞洲最大聯盟行銷峰會，7,000+ 人，110+ 國；Siraya 已有 12 月曼谷 AWA After Party 計劃（OWN 欄位）；接續 SiGMA South Asia，曼谷雙展最划算行程。",isNew:true,visit:["Siraya 已有 AWA After Party 計劃，本條為主展資訊","接觸 iGaming / 加密聯盟行銷生態採購決策方","了解最新 AI 行銷科技趨勢，強化流量業務"]},
 ];
 
 const OWN=[
@@ -232,7 +240,7 @@ function ok(ev,isOwn){
 function render(){
   const ef=EXT.filter(e=>ok(e,false));
   const of=OWN.filter(e=>ok(e,true));
-  buildCal('cal-ext','d-ext',ef,[3,4,5,6,7,8,9,10,11],false);
+  buildCal('cal-ext','d-ext',ef,[1,2,3,4,5,6,7,8,9,10,11,12],false);
   buildCal('cal-own','d-own',of,[1,2,3,4,5,6,7,8,9,10,11,12],true);
   const conf=of.filter(e=>e.confirmed).length;
   document.getElementById('stats').innerHTML=`
