@@ -129,4 +129,48 @@ CATEGORIES:iGaming
 UID:siraya-2026-50@sirayatech.com
 DTSTAMP:20260503T000000Z
 END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260627
+SUMMARY:SPiCE East Asia 2026
+LOCATION:胡志明市
+DESCRIPTION:SPiCE 系列亞洲版，精英高層論壇形式，聚焦越南博彩監管與數位化趨勢。
+CATEGORIES:iGaming
+UID:siraya-2026-53@sirayatech.com
+DTSTAMP:20260511T000000Z
+URL:https://www.spiceseries.com/
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260808
+SUMMARY:SPiCE Southeast Asia 2026
+LOCATION:曼谷
+DESCRIPTION:SPiCE 系列東南亞峰會，高層精英格式。Siraya 已規劃同期辦 After Party，人脈效益最大化。
+CATEGORIES:iGaming
+UID:siraya-2026-55@sirayatech.com
+DTSTAMP:20260511T000000Z
+URL:https://www.spiceseries.com/ssea
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261102
+SUMMARY:gamescom asia × Thailand Game Show 2026
+LOCATION:曼谷
+DESCRIPTION:東南亞最大遊戲商業與消費展，190\,000+訪客，5\,000+ B2B 專區。gamescom × 泰國遊戲展聯辦。
+CATEGORIES:iGaming
+UID:siraya-2026-58@sirayatech.com
+DTSTAMP:20260511T000000Z
+URL:https://gamescom.asia/
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261203
+SUMMARY:SiGMA South Asia 2026
+LOCATION:曼谷
+DESCRIPTION:3\,500+人，150+展商，聚焦東南亞及南亞 iGaming 市場，與 Affiliate World Bangkok 同期。
+CATEGORIES:iGaming
+UID:siraya-2026-60@sirayatech.com
+DTSTAMP:20260511T000000Z
+URL:https://sigma.world/summits/south-asia/
+END:VEVENT
 END:VCALENDAR
