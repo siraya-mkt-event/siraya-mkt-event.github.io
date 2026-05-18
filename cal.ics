@@ -1,691 +1,742 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Siraya Tech//Siraya Activities 2026//ZH
+PRODID:-//Siraya Tech//Activity Tracker//ZH
+X-WR-CALNAME:Siraya 全部活動
+X-WR-TIMEZONE:Asia/Taipei
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Siraya 活動總覽 2026
-X-WR-TIMEZONE:Asia/Taipei
-X-WR-CALDESC:全部活動
 BEGIN:VEVENT
+UID:20260325-AI-EXPO-Taiwan@siraya.tech
 DTSTART;VALUE=DATE:20260325
 DTEND;VALUE=DATE:20260328
 SUMMARY:AI EXPO Taiwan
 LOCATION:台北
-DESCRIPTION:AI 主題最集中。可逛展，評估未來參展機會。
 CATEGORIES:AI企業
-UID:siraya-2026-1@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 產業應用、企業導入、生態系\n焦點: AI 商業應用 / AI 平台 / GenAI\n備註: AI 主題最集中
+ 。可逛展，評估未來參展機會。\n連結: https://ai-expo.tw/
 URL:https://ai-expo.tw/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260409-GITEX-Asia---AI-Everything@siraya.tech
 DTSTART;VALUE=DATE:20260409
 DTEND;VALUE=DATE:20260411
 SUMMARY:GITEX Asia × AI Everything
 LOCATION:新加坡
-DESCRIPTION:23\,000人，110國。2026年版建議早規劃。
 CATEGORIES:AI企業
-UID:siraya-2026-2@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI、Cloud、資安、健康科技、Startup\n焦點: AI Everything Asia / AI × 生態系
+ \n備註: 23\,000人，110國。2026年版建議早規劃。\n連結: https://gitex.com/gitex-asia
 URL:https://gitex.com/gitex-asia
 END:VEVENT
 BEGIN:VEVENT
+UID:20260424-AI-Revolution-Summit-Vietnam@siraya.tech
 DTSTART;VALUE=DATE:20260424
 DTEND;VALUE=DATE:20260425
 SUMMARY:AI Revolution Summit Vietnam
 LOCATION:胡志明市
-DESCRIPTION:規模中等，已在調研清單。
 CATEGORIES:AI企業
-UID:siraya-2026-3@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Enterprise AI、GenAI\n焦點: AI adoption / GenAI 應用 / AI Infra\
+ n備註: 規模中等，已在調研清單。\n連結: https://airevolutionsummit.com/vietnam/
 URL:https://airevolutionsummit.com/vietnam/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260428-2026-D-Forum-------@siraya.tech
 DTSTART;VALUE=DATE:20260428
 DTEND;VALUE=DATE:20260429
 SUMMARY:2026 D Forum 智慧工廠論壇
 LOCATION:台北
-DESCRIPTION:聚焦 AI 驅動下的智慧製造轉型，探討自動化升級與供應鏈重組。
 CATEGORIES:AI企業
-UID:siraya-2026-4@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 智慧製造、供應鏈、工廠自動化\n焦點: AI 自適應製造 / 智慧工廠 / 供應鏈重組\n備註: 聚焦 AI 驅
+ 動下的智慧製造轉型，探討自動化升級與供應鏈重組。\n連結: https://www.digitimes.com.tw/seminar/DForum_
+ 20260428/
 URL:https://www.digitimes.com.tw/seminar/DForum_20260428/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260420-HK-Web3-Festival-2026@siraya.tech
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260424
 SUMMARY:HK Web3 Festival 2026
 LOCATION:香港
-DESCRIPTION:萬向區塊鏈主辦；Cobo辦新品發布，可評估贊助。50\,000+人。
 CATEGORIES:Web3
-UID:siraya-2026-5@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Web3、區塊鏈生態\n焦點: Web3 / DeFi / GameFi\n備註: 萬向區塊鏈主辦；Cobo辦新品發布
+ ，可評估贊助。50\,000+人。\n連結: https://www.web3festival.org
 URL:https://www.web3festival.org
 END:VEVENT
 BEGIN:VEVENT
+UID:20260423-GTC-------@siraya.tech
 DTSTART;VALUE=DATE:20260423
 DTEND;VALUE=DATE:20260425
 SUMMARY:GTC 全球流量大會
 LOCATION:深圳
-DESCRIPTION:Cobo在行業峰會期間辦Party，可贊助。30\,000+人。
 CATEGORIES:Web3
-UID:siraya-2026-6@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 流量、行銷、Web3\n焦點: Web3 x 流量 / 行銷科技\n備註: Cobo在行業峰會期間辦Party，可贊助
+ 。30\,000+人。\n連結: https://www.baijing.cn/gtc
 URL:https://www.baijing.cn/gtc
 END:VEVENT
 BEGIN:VEVENT
+UID:20260507-Human-Intelligence---AI@siraya.tech
 DTSTART;VALUE=DATE:20260507
 DTEND;VALUE=DATE:20260508
 SUMMARY:Human Intelligence & AI
 LOCATION:新加坡
-DESCRIPTION:主體較不聚焦，適合觀察趨勢。
 CATEGORIES:AI企業
-UID:siraya-2026-7@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Human × AI 協作、AI 教育與職場\n焦點: Human dimension of AI adoption\
+ n備註: 主體較不聚焦，適合觀察趨勢。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260512-DCCI-Datacentre---Cloud-Expo@siraya.tech
 DTSTART;VALUE=DATE:20260512
 DTEND;VALUE=DATE:20260514
 SUMMARY:DCCI Datacentre & Cloud Expo
 LOCATION:馬來西亞
-DESCRIPTION:偏基礎設施，過往贊助商較少知名廠商。
 CATEGORIES:AI企業
-UID:siraya-2026-8@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Cloud、Data Center、Infra\n焦點: AI Infra / 算力 / 平台層\n備註: 偏基礎設施
+ ，過往贊助商較少知名廠商。\n連結: https://malaysia.dccisummit.com/
 URL:https://malaysia.dccisummit.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260515-Conversational-AI---CX-Summit@siraya.tech
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
 SUMMARY:Conversational AI & CX Summit
 LOCATION:新加坡
-DESCRIPTION:東南亞各國定期舉辦；銀行、零售、電商產業。
 CATEGORIES:AI企業
-UID:siraya-2026-9@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: GenAI in CX、AI 自動化、對話式 AI\n焦點: GenAI / Chatbot & Voice / Ro
+ bo Advisors\n備註: 東南亞各國定期舉辦；銀行、零售、電商產業。\n連結: https://conversationaltechsumm
+ itasia.com/sg/
 URL:https://conversationaltechsummitasia.com/sg/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260520-Asia-Tech-x-Singapore--ATxSG-@siraya.tech
 DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260523
 SUMMARY:Asia Tech x Singapore (ATxSG)
 LOCATION:新加坡
-DESCRIPTION:7\,000人，50+講者。主題廣涵蓋 AI 應用、工作流。
 CATEGORIES:AI企業
-UID:siraya-2026-10@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI、Cloud、Security、Digital Economy\n焦點: AI 生態系 / 跨產業 AI 應用\n
+ 備註: 7\,000人，50+講者。主題廣涵蓋 AI 應用、工作流。\n連結: https://asiatechxsg.com
 URL:https://asiatechxsg.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260506-ASEAN-Gaming-Summit-2026@siraya.tech
 DTSTART;VALUE=DATE:20260506
 DTEND;VALUE=DATE:20260509
 SUMMARY:ASEAN Gaming Summit 2026
 LOCATION:馬尼拉
-DESCRIPTION:東南亞最大 iGaming 峰會之一。
 CATEGORIES:iGaming
-UID:siraya-2026-11@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、電競、遊戲產業\n焦點: iGaming 生態 / 東南亞遊戲市場\n備註: 東南亞最大 iGamin
+ g 峰會之一。\n連結: https://aseangaming.com/
 URL:https://aseangaming.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260512-G2E-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20260512
 DTEND;VALUE=DATE:20260515
 SUMMARY:G2E Asia 2026
 LOCATION:澳門
-DESCRIPTION:亞洲最具規模的博彩與 iGaming 展會。
 CATEGORIES:AI企業
-UID:siraya-2026-12@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 博彩、iGaming、娛樂城科技\n焦點: iGaming 技術 / 博彩生態\n備註: 亞洲最具規模的博彩與 iGa
+ ming 展會。\n連結: https://www.g2easia.com/
 URL:https://www.g2easia.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260518-Southeast-Asia-Blockchain-Week@siraya.tech
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260525
 SUMMARY:Southeast Asia Blockchain Week
 LOCATION:曼谷
-DESCRIPTION:東南亞 Web3 生態年度盛會。
 CATEGORIES:Web3
-UID:siraya-2026-13@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 區塊鏈、Web3、DeFi\n焦點: Web3 生態 / DeFi / 東南亞區塊鏈\n備註: 東南亞 Web3 生態
+ 年度盛會。\n連結: https://www.seablockchainweek.org/
 URL:https://www.seablockchainweek.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260524-Web3-Builders--Summit--LFBUIDL-2026@siraya.tech
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260528
+SUMMARY:Web3 Builders' Summit: LFBUIDL 2026
+LOCATION:峴港（越南）
+CATEGORIES:Web3
+DESCRIPTION:主軸: Web3 工程、AI × 區塊鏈、Builder 社群\n焦點: Web3 Engineering / AI × Bl
+ ockchain / Builder Community\n備註: 350+ Web3 工程師、創辦人、投資人；sqrDAO 主辦；聚焦 Build
+ er 實作。與 Unchained Summit（5/28–29 同城）連接，越南 Web3 雙展效益最高。\n連結: https://www.we
+ b3builderssummit.com/
+URL:https://www.web3builderssummit.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:20260528-Unchained-Summit-Vietnam@siraya.tech
 DTSTART;VALUE=DATE:20260528
 DTEND;VALUE=DATE:20260530
 SUMMARY:Unchained Summit Vietnam
 LOCATION:峇港
-DESCRIPTION:越南 Web3 與加密產業峰會。
 CATEGORIES:Web3
-UID:siraya-2026-14@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Web3、區塊鏈、DeFi\n焦點: Web3 / DeFi / 越南加密生態\n備註: 越南 Web3 與加密產業峰
+ 會。\n連結: https://unchainedsummit.com/vietnam/
 URL:https://unchainedsummit.com/vietnam/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260601-GTC-Taipei-2026-NVIDIA-@siraya.tech
+DTSTART;VALUE=DATE:20260601
+DTEND;VALUE=DATE:20260605
+SUMMARY:GTC Taipei 2026（NVIDIA）
+LOCATION:台北
+CATEGORIES:AI企業
+DESCRIPTION:主軸: AI 基礎建設、Agentic AI、Physical AI、AI for Science\n焦點: AI Infra
+ structure / Agentic AI / Robotics / LLM\n備註: Jensen Huang 主題演講（6/1 台北流行音樂中
+ 心）；6/2–4 台北國際會議中心。AI 硬體與技術密度最高的亞洲年會，與 COMPUTEX 同期但需分開報名。\n連結: https://www.
+ nvidia.com/en-tw/gtc/taipei/
+URL:https://www.nvidia.com/en-tw/gtc/taipei/
+END:VEVENT
+BEGIN:VEVENT
+UID:20260602-COMPUTEX@siraya.tech
 DTSTART;VALUE=DATE:20260602
 DTEND;VALUE=DATE:20260606
 SUMMARY:COMPUTEX
 LOCATION:台北南港
-DESCRIPTION:注意與 Sigma Asia 時間衝突。
 CATEGORIES:AI企業
-UID:siraya-2026-15@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 基礎建設、資料中心、雲端生態\n焦點: AI Infrastructure / AI Server / Clou
+ d\n備註: 注意與 Sigma Asia 時間衝突。\n連結: https://www.computex.com.tw
 URL:https://www.computex.com.tw
 END:VEVENT
 BEGIN:VEVENT
+UID:20260610-SuperAI@siraya.tech
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260612
 SUMMARY:SuperAI
 LOCATION:新加坡
-DESCRIPTION:⭐ 強烈推薦。7\,000人，100+國，1\,500+AI企業。純AI年會，Startup競賽$250K+。
 CATEGORIES:AI企業
-UID:siraya-2026-16@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Frontier AI、LLM、Robotics、GenAI\n焦點: LLM / Robotics / GenAI 
+ / AI × Finance\, Healthcare\n備註: ⭐ 強烈推薦。7\,000人，100+國，1\,500+AI企業。純AI年會，St
+ artup競賽$250K+。\n連結: https://superai.com
 URL:https://superai.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260601-AWS-Summit-Taiwan@siraya.tech
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:AWS Summit Taiwan
 LOCATION:台北
-DESCRIPTION:尚未開放報名，跟主辦確認。
 CATEGORIES:AI企業
-UID:siraya-2026-17@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 雲端生態、企業上雲、AI 架構\n焦點: AI on Cloud / GenAI / AI Security\n備註:
+  尚未開放報名，跟主辦確認。\n連結: https://aws.amazon.com/tw/events/summits/
 URL:https://aws.amazon.com/tw/events/summits/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260604-AI--Power-Hong-Kong-2026@siraya.tech
 DTSTART;VALUE=DATE:20260604
 DTEND;VALUE=DATE:20260606
 SUMMARY:AI+ Power Hong Kong 2026
 LOCATION:香港 HKCEC
-DESCRIPTION:香港會展中心，亞洲 AI EXPO 聯盟成員，NVIDIA、Google、Microsoft 歷年參與，香港最大純 AI 商業應用展。
 CATEGORIES:AI企業
-UID:siraya-2026-18@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 商業應用、企業 AI 導入、AI Infra\n焦點: AI Applications × Business /
+  FinTech / MarTech\n備註: 香港會展中心，亞洲 AI EXPO 聯盟成員，NVIDIA、Google、Microsoft 歷年參
+ 與，香港最大純 AI 商業應用展。\n連結: https://www.aipluspower.com
 URL:https://www.aipluspower.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260615-AI4X---Accelerate-Conference-2026@siraya.tech
 DTSTART;VALUE=DATE:20260615
 DTEND;VALUE=DATE:20260620
 SUMMARY:AI4X – Accelerate Conference 2026
 LOCATION:新加坡
-DESCRIPTION:Raffles City Convention Centre，NTU 與多倫多大學聯合主辦，800+ 人，60+ 國際講者，結合學術與深科技產業應用。
 CATEGORIES:AI企業
-UID:siraya-2026-19@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI × 科學、材料科學、生命科學、金融 Deep Tech\n焦點: AI for Science / Deep T
+ ech / AI × Research\n備註: Raffles City Convention Centre，NTU 與多倫多大學聯合主辦，800
+ + 人，60+ 國際講者，結合學術與深科技產業應用。\n連結: https://ai4x.cc
 URL:https://ai4x.cc
 END:VEVENT
 BEGIN:VEVENT
+UID:20260617-AWS-Summit-Hong-Kong-2026@siraya.tech
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:AWS Summit Hong Kong 2026
+LOCATION:香港
+CATEGORIES:AI企業
+DESCRIPTION:主軸: GenAI、雲端、AI 安全、Data\n焦點: GenAI on Cloud / AI Security / Ent
+ erprise Cloud\n備註: AWS 主辦免費一日峰會；60+ 場 Session 涵蓋 GenAI、雲端韌性與資安；香港版，與台灣場分開舉
+ 辦。\n連結: https://aws.amazon.com/events/summits/hongkong/
+URL:https://aws.amazon.com/events/summits/hongkong/
+END:VEVENT
+BEGIN:VEVENT
+UID:20260624-AI-TAIWAN---------All-in-AI@siraya.tech
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260627
 SUMMARY:AI TAIWAN 未來商務展 × All in AI
 LOCATION:台北
-DESCRIPTION:台北花博爭艷館，數位時代主辦，台灣規模最大 AI 商業展，含三天 All in AI 論壇場次，聚焦企業 AI 降本增效與新商模。
 CATEGORIES:AI企業
-UID:siraya-2026-20@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業 AI 轉型、AI 降本增效、AI 新商模\n焦點: AI 商業應用 / 企業 AI 落地 / 數位轉型\n備註:
+  台北花博爭艷館，數位時代主辦，台灣規模最大 AI 商業展，含三天 All in AI 論壇場次，聚焦企業 AI 降本增效與新商模。\n連結: ht
+ tps://ai-taiwan.com.tw
 URL:https://ai-taiwan.com.tw
 END:VEVENT
 BEGIN:VEVENT
+UID:20260702-iThome-AI-Enterprise-Summit-2026@siraya.tech
 DTSTART;VALUE=DATE:20260702
 DTEND;VALUE=DATE:20260703
 SUMMARY:iThome AI Enterprise Summit 2026
 LOCATION:台北南港
-DESCRIPTION:台北南港展覽二館 7F，iThome 主辦，聚焦技術決策層（CIO / 架構師），與臺灣雲端大會同期 7/1–2 舉辦。
 CATEGORIES:AI企業
-UID:siraya-2026-21@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業 LLM 部署、RAG 落地、AI 算力架構\n焦點: Enterprise AI / LLM / RAG / A
+ I Infra\n備註: 台北南港展覽二館 7F，iThome 主辦，聚焦技術決策層（CIO / 架構師），與臺灣雲端大會同期 7/1–2 舉辦。\
+ n連結: https://aienterprise.ithome.com.tw/2026/
 URL:https://aienterprise.ithome.com.tw/2026/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260724-GenAI-Summit-Hong-Kong@siraya.tech
 DTSTART;VALUE=DATE:20260724
 DTEND;VALUE=DATE:20260725
 SUMMARY:GenAI Summit Hong Kong
 LOCATION:香港
-DESCRIPTION:香港本地一日峰會，企業領袖與AI創業者為主。
 CATEGORIES:AI企業
-UID:siraya-2026-22@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業 GenAI 落地應用\n焦點: GenAI 應用 / 企業數位轉型\n備註: 香港本地一日峰會，企業領袖與AI創
+ 業者為主。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260701-AI-WAVE-SHOW@siraya.tech
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
 SUMMARY:AI WAVE SHOW
 LOCATION:台北
-DESCRIPTION:偏硬體與國家AI形象展示，可逛展了解趨勢。
 CATEGORIES:AI企業
-UID:siraya-2026-23@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 解決方案展示、企業應用\n焦點: AI 應用 / AI 解決方案 / PoC\n備註: 偏硬體與國家AI形象展示
+ ，可逛展了解趨勢。\n連結: https://ai-wave.tw/
 URL:https://ai-wave.tw/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260722-DigiTech-ASEAN-Thailand@siraya.tech
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260725
 SUMMARY:DigiTech ASEAN Thailand
 LOCATION:曼谷
-DESCRIPTION:泰國經濟部主辦，12\,000+人。可考慮結合時段自辦講座。
 CATEGORIES:AI企業
-UID:siraya-2026-24@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI、Cloud、Digital 數位轉型\n焦點: AI 應用 / 數位轉型\n備註: 泰國經濟部主辦，12\,00
+ 0+人。可考慮結合時段自辦講座。\n連結: https://digitechasean.com/
 URL:https://digitechasean.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260801-HITCON@siraya.tech
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:HITCON
 LOCATION:台北
-DESCRIPTION:Invitation Only，資安主題為主。Web3資安討論，可讓相關人員逛逛。
 CATEGORIES:AI企業
-UID:siraya-2026-25@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 資安技術、攻防、研究導向\n焦點: AI × 資安技術 / LLM Security\n備註: Invitation 
+ Only，資安主題為主。Web3資安討論，可讓相關人員逛逛。\n連結: https://hitcon.org
 URL:https://hitcon.org
 END:VEVENT
 BEGIN:VEVENT
+UID:20260914-IAG-Expo-2026@siraya.tech
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260918
+SUMMARY:IAG Expo 2026
+LOCATION:馬尼拉
+CATEGORIES:iGaming
+DESCRIPTION:主軸: 亞太博彩監管、iGaming 科技、Responsible Gaming\n焦點: iGaming Asia-Paci
+ fic / PAGCOR Regulator / Gaming Tech\n備註: Newport World Resorts 馬尼拉；含 IAG 
+ Academy Summit、Regulators Forum（PAGCOR 主持）、CiG iDEA Summit；展覽區暫停，聚焦論壇與人脈。\
+ n連結: https://iagexpo.com/
+URL:https://iagexpo.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:20260917-Reuters-Momentum-AI-Asia@siraya.tech
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Reuters Momentum AI Asia
 LOCATION:新加坡
-DESCRIPTION:300人C-suite峰會，30+高層講者。贊助可獲名單+演講機會。
 CATEGORIES:AI企業
-UID:siraya-2026-26@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業 AI 策略、AI ROI、AI 治理\n焦點: AI Value & Scalability / AI Gove
+ rnance\n備註: 300人C-suite峰會，30+高層講者。贊助可獲名單+演講機會。\n連結: https://10times.com/e1
+ h1-7g11-zrkp-g
 URL:https://10times.com/e1h1-7g11-zrkp-g
 END:VEVENT
 BEGIN:VEVENT
+UID:20260929-Big-Data---AI-World-Asia@siraya.tech
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20261001
 SUMMARY:Big Data & AI World Asia
 LOCATION:新加坡
-DESCRIPTION:29\,000人，500+參展商。含Cloud & AI Infra、DevOps、Cyber子會。
 CATEGORIES:AI企業
-UID:siraya-2026-27@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI、Big Data、Analytics\n焦點: Enterprise AI / Data-driven AI\n
+ 備註: 29\,000人，500+參展商。含Cloud & AI Infra、DevOps、Cyber子會。\n連結: https://www.si
+ ngaporetechnologyweek.com/
 URL:https://www.singaporetechnologyweek.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260929-SBC-Summit@siraya.tech
 DTSTART;VALUE=DATE:20260929
 DTEND;VALUE=DATE:20261002
 SUMMARY:SBC Summit
 LOCATION:新加坡
-DESCRIPTION:全球最大 iGaming 峰會之一，業界必參。
 CATEGORIES:iGaming
-UID:siraya-2026-28@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、支付、平台科技\n焦點: iGaming 生態 / 支付 / 營運\n備註: 全球最大 iGaming
+  峰會之一，業界必參。\n連結: https://sbcevents.com/sbc-summit/
 URL:https://sbcevents.com/sbc-summit/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261001-GITEX-Vietnam@siraya.tech
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261003
 SUMMARY:GITEX Vietnam
 LOCATION:河內
-DESCRIPTION:去中心化、區塊鏈主題多。建議Web3團隊逛展。
 CATEGORIES:AI企業
-UID:siraya-2026-29@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI、Cloud、Cybersecurity\n焦點: AI 生態 / 創新應用\n備註: 去中心化、區塊鏈主題多。建
+ 議Web3團隊逛展。\n連結: https://gitexvietnam.com/
 URL:https://gitexvietnam.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261102-Sigma-Europe@siraya.tech
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261105
 SUMMARY:Sigma Europe
 LOCATION:羅馬
-DESCRIPTION:Sigma 集團旗下歐洲版展會，iGaming 專業人士匯聚。
 CATEGORIES:iGaming
-UID:siraya-2026-30@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、博彩、電競\n焦點: iGaming 生態 / 歐洲市場\n備註: Sigma 集團旗下歐洲版展會，i
+ Gaming 專業人士匯聚。\n連結: https://sigma.world/summits/world/
 URL:https://sigma.world/summits/world/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261101-DIGITIMES-Security-Summit@siraya.tech
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:DIGITIMES Security Summit
 LOCATION:台北
-DESCRIPTION:與Siraya服務高度符合。已聯繫主辦。黃金贊助含演講+名單。
 CATEGORIES:AI企業
-UID:siraya-2026-31@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業資安策略、趨勢論壇\n焦點: AI Security / Cloud Security / 企業治理\n備註: 與
+ Siraya服務高度符合。已聯繫主辦。黃金贊助含演講+名單。\n連結: https://www.digitimes.com.tw/seminar/s
+ ecuritysummit_2025/
 URL:https://www.digitimes.com.tw/seminar/securitysummit_2025/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260210-Consensus-Hong-Kong-2026@siraya.tech
 DTSTART;VALUE=DATE:20260210
 DTEND;VALUE=DATE:20260213
 SUMMARY:Consensus Hong Kong 2026
 LOCATION:香港
-DESCRIPTION:CoinDesk 主辦亞洲首屆旗艦加密峰會；含香港機構峰會與 CoinDesk PitchFest。
 CATEGORIES:Web3
-UID:siraya-2026-32@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 區塊鏈生態、機構加密貨幣、DeFi、AI × Web3\n焦點: Web3 生態 / 機構採用 / DeFi\n備註:
+  CoinDesk 主辦亞洲首屆旗艦加密峰會；含香港機構峰會與 CoinDesk PitchFest。\n連結: https://consensus
+ -hongkong.coindesk.com/
 URL:https://consensus-hongkong.coindesk.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260515-AI-Engineer-World-s-Fair-Singapore-2026@siraya.tech
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260518
 SUMMARY:AI Engineer World's Fair Singapore 2026
 LOCATION:新加坡
-DESCRIPTION:全球 AI Engineer World's Fair 首屆亞洲版；OpenAI、Google DeepMind 贊助；2\,000+ 工程師，純技術場合。
 CATEGORIES:AI企業
-UID:siraya-2026-33@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI 工程、LLM 開發、AI 基礎設施、Agent 開發\n焦點: AI Engineering / LLM Inf
+ ra / AI Agents\n備註: 全球 AI Engineer World's Fair 首屆亞洲版；OpenAI、Google DeepMi
+ nd 贊助；2\,000+ 工程師，純技術場合。\n連結: https://www.ai.engineer/singapore
 URL:https://www.ai.engineer/singapore
 END:VEVENT
 BEGIN:VEVENT
+UID:20260521-Tech-Fest-Summit-Hong-Kong-2026@siraya.tech
 DTSTART;VALUE=DATE:20260521
 DTEND;VALUE=DATE:20260522
 SUMMARY:Tech Fest Summit Hong Kong 2026
 LOCATION:香港
-DESCRIPTION:HKCEC，2\,000+ 高階科技決策者；含 Cloud Forum、Nexus APAC。
 CATEGORIES:AI企業
-UID:siraya-2026-34@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 企業科技、Cloud、AI 應用、數位轉型\n焦點: Enterprise Tech / AI 應用 / Cloud\
+ n備註: HKCEC，2\,000+ 高階科技決策者；含 Cloud Forum、Nexus APAC。\n連結: https://techfest
+ .hk/
 URL:https://techfest.hk/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260624-SPiCE-East-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260627
 SUMMARY:SPiCE East Asia 2026
 LOCATION:胡志明市
-DESCRIPTION:SPiCE 系列越南版；聚焦越南及東亞 iGaming 市場；高層精英論壇格式。
 CATEGORIES:iGaming
-UID:siraya-2026-35@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、越南博彩監管、數位博彩、支付\n焦點: iGaming Compliance / Digital Be
+ tting / Vietnam Market\n備註: SPiCE 系列越南版；聚焦越南及東亞 iGaming 市場；高層精英論壇格式。\n連結: 
+ https://www.spiceseries.com/sea
 URL:https://www.spiceseries.com/sea
 END:VEVENT
 BEGIN:VEVENT
+UID:20260713-WebX-2026@siraya.tech
 DTSTART;VALUE=DATE:20260713
 DTEND;VALUE=DATE:20260715
 SUMMARY:WebX 2026
 LOCATION:東京
-DESCRIPTION:CoinPost 主辦；亞洲最大 Web3 年會之一，13\,000+ 人，296 講者。
 CATEGORIES:Web3
-UID:siraya-2026-36@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: Web3、DeFi、代幣化、GameFi\n焦點: Web3 生態 / DeFi / GameFi\n備註: Coin
+ Post 主辦；亞洲最大 Web3 年會之一，13\,000+ 人，296 講者。\n連結: https://webx-asia.com/
 URL:https://webx-asia.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260801-Asia-Blockchain-Summit-2026@siraya.tech
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260804
 SUMMARY:Asia Blockchain Summit 2026
 LOCATION:台北
-DESCRIPTION:BlockTempo 主辦，10\,000+ 人，60+ 國。台灣旗艦 Web3 年度峰會。
 CATEGORIES:Web3
-UID:siraya-2026-37@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 區塊鏈、Web3、AI × 區塊鏈\n焦點: Web3 生態 / AI × Blockchain / 台灣 Web3\
+ n備註: BlockTempo 主辦，10\,000+ 人，60+ 國。台灣旗艦 Web3 年度峰會。\n連結: https://abs.io/
 URL:https://abs.io/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260805-SPiCE-Southeast-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260808
 SUMMARY:SPiCE Southeast Asia 2026
 LOCATION:曼谷
-DESCRIPTION:SPiCE 東南亞峰會，高層精英格式。Siraya 已規劃同期辦 After Party。
 CATEGORIES:iGaming
-UID:siraya-2026-38@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、東南亞博彩生態、合規、支付\n焦點: iGaming SEA / Compliance / Affil
+ iate\n備註: SPiCE 東南亞峰會，高層精英格式。Siraya 已規劃同期辦 After Party。\n連結: https://www.s
+ piceseries.com/ssea
 URL:https://www.spiceseries.com/ssea
 END:VEVENT
 BEGIN:VEVENT
+UID:20260825-ClawCon-Singapore-2026@siraya.tech
 DTSTART;VALUE=DATE:20260825
 DTEND;VALUE=DATE:20260827
 SUMMARY:ClawCon Singapore 2026
 LOCATION:新加坡
-DESCRIPTION:亞洲首場大規模 AI Agent 大會，10\,000 人，免費參加。DBS、Grab、Sea Limited CTO 出席。
 CATEGORIES:AI企業
-UID:siraya-2026-39@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: AI Agent、企業 AI 部署、AI 開發者社群\n焦點: AI Agents / Enterprise AI /
+  Builder Community\n備註: 亞洲首場大規模 AI Agent 大會，10\,000 人，免費參加。DBS、Grab、Sea Li
+ mited CTO 出席。\n連結: https://clawcon.sg/
 URL:https://clawcon.sg/
 END:VEVENT
 BEGIN:VEVENT
+UID:20260827-Bitcoin-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20260827
 DTEND;VALUE=DATE:20260829
 SUMMARY:Bitcoin Asia 2026
 LOCATION:香港 HKCEC
-DESCRIPTION:15\,000+ 人，200+ 講者。香港最具規模 Bitcoin 主題年會。
 CATEGORIES:Web3
-UID:siraya-2026-40@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 比特幣生態、Layer-2、加密資產監管\n焦點: Bitcoin / Layer-2 / Institutional
+  Crypto\n備註: 15\,000+ 人，200+ 講者。香港最具規模 Bitcoin 主題年會。\n連結: https://asia.b.t
+ c/2026
 URL:https://asia.b.tc/2026
 END:VEVENT
 BEGIN:VEVENT
+UID:20261029-gamescom-asia---Thailand-Game-Show-2026@siraya.tech
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261102
 SUMMARY:gamescom asia × Thailand Game Show 2026
 LOCATION:曼谷
-DESCRIPTION:東南亞最大遊戲商業展，190\,000+ 訪客，5\,000+ B2B 專區。gamescom × 泰國遊戲展聯辦。
 CATEGORIES:iGaming
-UID:siraya-2026-41@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 遊戲產業、電競、B2B 遊戲科技\n焦點: Gaming B2B / iGaming 供應商 / 電競\n備註: 東南
+ 亞最大遊戲商業展，190\,000+ 訪客，5\,000+ B2B 專區。gamescom × 泰國遊戲展聯辦。\n連結: https://game
+ scom.asia/
 URL:https://gamescom.asia/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261118-Singapore-FinTech-Festival-2026@siraya.tech
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261121
 SUMMARY:Singapore FinTech Festival 2026
 LOCATION:新加坡
-DESCRIPTION:全球最大 FinTech 展，70\,000+ 人，140+ 國；新加坡 MAS 主辦，監管洞察價值極高。
 CATEGORIES:AI企業
-UID:siraya-2026-42@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: FinTech、數位資產、AI 治理、DeFi、RegTech\n焦點: AI × FinTech / Digital
+  Assets / AI Governance\n備註: 全球最大 FinTech 展，70\,000+ 人，140+ 國；新加坡 MAS 主辦，監
+ 管洞察價值極高。\n連結: https://www.fintechfestival.sg/
 URL:https://www.fintechfestival.sg/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261130-SiGMA-South-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261203
 SUMMARY:SiGMA South Asia 2026
 LOCATION:曼谷
-DESCRIPTION:SiGMA 南亞旗艦峰會，3\,500+ 代表；緊接 Affiliate World Asia（12/3–4），曼谷雙展效益最高。
 CATEGORIES:iGaming
-UID:siraya-2026-43@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: iGaming、東南亞博彩生態、行動博彩\n焦點: iGaming SEA / Mobile Gaming / Aff
+ iliate\n備註: SiGMA 南亞旗艦峰會，3\,500+ 代表；緊接 Affiliate World Asia（12/3–4），曼谷雙展效益
+ 最高。\n連結: https://sigma.world/summits/south-asia/
 URL:https://sigma.world/summits/south-asia/
 END:VEVENT
 BEGIN:VEVENT
+UID:20261203-Affiliate-World-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261205
 SUMMARY:Affiliate World Asia 2026
 LOCATION:曼谷
-DESCRIPTION:亞洲最大聯盟行銷峰會，7\,000+ 人，110+ 國；Siraya 已有 12 月曼谷 AWA After Party 計劃。
 CATEGORIES:iGaming
-UID:siraya-2026-44@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:主軸: 聯盟行銷、iGaming 流量、AI 行銷科技\n焦點: iGaming Affiliate / 流量業務 / AI 
+ 行銷\n備註: 亞洲最大聯盟行銷峰會，7\,000+ 人，110+ 國；Siraya 已有 12 月曼谷 AWA After Party 計劃。\n
+ 連結: https://affiliateworldconferences.com/asia
 URL:https://affiliateworldconferences.com/asia
 END:VEVENT
 BEGIN:VEVENT
+UID:20260119-ICE-Barcelona-2026---After-Party@siraya.tech
 DTSTART;VALUE=DATE:20260119
 DTEND;VALUE=DATE:20260122
-SUMMARY:[自辦] ICE Barcelona 2026 + After Party
+SUMMARY:ICE Barcelona 2026 + After Party
 LOCATION:西班牙
-DESCRIPTION:iGaming圈最大展會之一。35㎡展位。優質人脈交換，品牌曝光。
 CATEGORIES:iGaming
-UID:siraya-2026-45@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: iGaming圈最大展會之一。35㎡展位。優質人脈交換，品牌曝光。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260316-Sri-Lanka-After-Party-GGC---@siraya.tech
 DTSTART;VALUE=DATE:20260316
 DTEND;VALUE=DATE:20260317
-SUMMARY:[自辦] Sri Lanka After Party（GGC期間）
+SUMMARY:Sri Lanka After Party（GGC期間）
 LOCATION:斯里蘭卡
-DESCRIPTION:灰度GGC展會期間辦，建議選17號。
 CATEGORIES:iGaming
-UID:siraya-2026-46@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 灰度GGC展會期間辦，建議選17號。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260409----Web3---@siraya.tech
 DTSTART;VALUE=DATE:20260409
 DTEND;VALUE=DATE:20260410
-SUMMARY:[自辦] 越南 Web3 私局
+SUMMARY:越南 Web3 私局
 LOCATION:越南
-DESCRIPTION:建議4/9辦，與Cobo/AWC Co-host。
 CATEGORIES:Web3
-UID:siraya-2026-47@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 建議4/9辦，與Cobo/AWC Co-host。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260411------AI----@siraya.tech
 DTSTART;VALUE=DATE:20260411
 DTEND;VALUE=DATE:20260412
-SUMMARY:[自辦] 馬來西亞 AI 研討會
+SUMMARY:馬來西亞 AI 研討會
 LOCATION:馬來西亞
-DESCRIPTION:Co-host with BytePlus/Cloudflare，展示落地案例，挖掘AI需求與專案合作。
-CATEGORIES:AI企業,iGaming
-UID:siraya-2026-48@sirayatech.com
-DTSTAMP:20260516T000000Z
+CATEGORIES:
+DESCRIPTION:備註: Co-host with BytePlus/Cloudflare，展示落地案例，挖掘AI需求與專案合作。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260522-AI-----------@siraya.tech
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260523
-SUMMARY:[自辦] AI賦能時代 人才戰略論壇
+SUMMARY:AI賦能時代 人才戰略論壇
 LOCATION:台北
-DESCRIPTION:AI 賦能時代人才戰略主題論壇，免費公開活動。
 CATEGORIES:AI企業
-UID:siraya-2026-49@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: AI 賦能時代人才戰略主題論壇，免費公開活動。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260601-Sigma-Asia-2026@siraya.tech
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260604
-SUMMARY:[自辦] Sigma Asia 2026
+SUMMARY:Sigma Asia 2026
 LOCATION:馬尼拉
-DESCRIPTION:48㎡展位。
 CATEGORIES:iGaming
-UID:siraya-2026-50@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 48㎡展位。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260601-Sigma-After-Party@siraya.tech
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260604
-SUMMARY:[自辦] Sigma After Party
+SUMMARY:Sigma After Party
 LOCATION:馬尼拉
-DESCRIPTION:Sigma展會期間舉辦，優質人脈交換，圈內口碑傳播。
 CATEGORIES:iGaming
-UID:siraya-2026-51@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: Sigma展會期間舉辦，優質人脈交換，圈內口碑傳播。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260601-Web3----6--@siraya.tech
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
-SUMMARY:[自辦] Web3 私局（6月）
+SUMMARY:Web3 私局（6月）
 LOCATION:待定
-DESCRIPTION:建議6月中下旬辦，與Cobo Co-host。
 CATEGORIES:Web3
-UID:siraya-2026-52@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 建議6月中下旬辦，與Cobo Co-host。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260701-iGB-LIVE-2026@siraya.tech
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260703
-SUMMARY:[自辦] iGB LIVE 2026
+SUMMARY:iGB LIVE 2026
 LOCATION:倫敦
-DESCRIPTION:18㎡展位。Exhibit Fee + Booth Build GBP22\,304 (USD29k)。
 CATEGORIES:iGaming
-UID:siraya-2026-53@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 18㎡展位。Exhibit Fee + Booth Build GBP22\,304 (USD29k)。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260701-iGB-After-Party@siraya.tech
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260703
-SUMMARY:[自辦] iGB After Party
+SUMMARY:iGB After Party
 LOCATION:倫敦
-DESCRIPTION:iGB LIVE展會期間舉辦After Party。
 CATEGORIES:iGaming
-UID:siraya-2026-54@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: iGB LIVE展會期間舉辦After Party。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260805-SPiCE-BKK-After-Party@siraya.tech
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260808
-SUMMARY:[自辦] SPiCE BKK After Party
+SUMMARY:SPiCE BKK After Party
 LOCATION:泰國
-DESCRIPTION:Co-host with CDNetworks，考慮邀請Pronet聯辦。
 CATEGORIES:iGaming
-UID:siraya-2026-55@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: Co-host with CDNetworks，考慮邀請Pronet聯辦。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260820-Coinfest-Asia-----@siraya.tech
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260822
-SUMMARY:[自辦] Coinfest Asia（峇里島）
+SUMMARY:Coinfest Asia（峇里島）
 LOCATION:峇里島
-DESCRIPTION:9㎡展位。Exhibition 1萬 + Party 1.2萬，與Cobo Co-host Party，預算55開。
 CATEGORIES:Web3
-UID:siraya-2026-56@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 9㎡展位。Exhibition 1萬 + Party 1.2萬，與Cobo Co-host Party，預算55開。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260820-Coinfest-After-Party@siraya.tech
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260822
-SUMMARY:[自辦] Coinfest After Party
+SUMMARY:Coinfest After Party
 LOCATION:峇里島
-DESCRIPTION:Coinfest Asia 展會期間與 Cobo Co-host Party。
 CATEGORIES:Web3
-UID:siraya-2026-57@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: Coinfest Asia 展會期間與 Cobo Co-host Party。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260901-Vibe-Coding---Siraya-AI---@siraya.tech
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-SUMMARY:[自辦] Vibe Coding × Siraya AI 活動
+SUMMARY:Vibe Coding × Siraya AI 活動
 LOCATION:台北
-DESCRIPTION:與 Vibe Coding 社群聯辦，台北，約 200 人。
 CATEGORIES:AI企業
-UID:siraya-2026-58@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 與 Vibe Coding 社群聯辦，台北，約 200 人。
 END:VEVENT
 BEGIN:VEVENT
+UID:20260901-Web3----Q3----@siraya.tech
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20260902
-SUMMARY:[自辦] Web3 私局（Q3 越南）
+SUMMARY:Web3 私局（Q3 越南）
 LOCATION:越南
-DESCRIPTION:活動較密集，若辦則建議9月中旬。
 CATEGORIES:Web3
-UID:siraya-2026-59@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 活動較密集，若辦則建議9月中旬。
 END:VEVENT
 BEGIN:VEVENT
+UID:20261007-TOKEN2049----@siraya.tech
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261009
-SUMMARY:[自辦] TOKEN2049 新加坡
+SUMMARY:TOKEN2049 新加坡
 LOCATION:新加坡
-DESCRIPTION:9㎡展位參展 + 贊助Cobo Party。
 CATEGORIES:Web3
-UID:siraya-2026-60@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 9㎡展位參展 + 贊助Cobo Party。
 END:VEVENT
 BEGIN:VEVENT
+UID:20261007-TOKEN2049-After-Party@siraya.tech
 DTSTART;VALUE=DATE:20261007
 DTEND;VALUE=DATE:20261009
-SUMMARY:[自辦] TOKEN2049 After Party
+SUMMARY:TOKEN2049 After Party
 LOCATION:新加坡
-DESCRIPTION:TOKEN2049展會期間After Party。
 CATEGORIES:Web3
-UID:siraya-2026-61@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: TOKEN2049展會期間After Party。
 END:VEVENT
 BEGIN:VEVENT
+UID:20261001-Web3----Q4----@siraya.tech
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:[自辦] Web3 私局（Q4 越南）
+SUMMARY:Web3 私局（Q4 越南）
 LOCATION:越南
-DESCRIPTION:Q4預計越南Web3產業私局。
 CATEGORIES:Web3
-UID:siraya-2026-62@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: Q4預計越南Web3產業私局。
 END:VEVENT
 BEGIN:VEVENT
+UID:20261201-AWA-After-Party----@siraya.tech
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:[自辦] AWA After Party（泰國）
+SUMMARY:AWA After Party（泰國）
 LOCATION:泰國
-DESCRIPTION:AWA展會期間舉辦。
 CATEGORIES:iGaming
-UID:siraya-2026-63@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: AWA展會期間舉辦。
 END:VEVENT
 BEGIN:VEVENT
+UID:20261201-Taipei-Blockchain-Week-2026@siraya.tech
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:[自辦] Taipei Blockchain Week 2026
+SUMMARY:Taipei Blockchain Week 2026
 LOCATION:台灣
-DESCRIPTION:亞洲技術密度最高的本地Web3大會。
 CATEGORIES:Web3
-UID:siraya-2026-64@sirayatech.com
-DTSTAMP:20260516T000000Z
+DESCRIPTION:備註: 亞洲技術密度最高的本地Web3大會。
 END:VEVENT
 END:VCALENDAR
